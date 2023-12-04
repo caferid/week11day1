@@ -26,9 +26,13 @@ export const counterSlice = createSlice({
     haddleInputBol: (state, action) => {
       state.value /= action.payload
     },
+    resetCount: (state) => {
+      state.value =0
+    },
+
   },
 })
 
-export const { increment, decrement ,haddleInputToplama,haddleInputCix,haddleInputVur,haddleInputBol} = counterSlice.actions
+export const { increment, decrement ,haddleInputToplama,haddleInputCix,haddleInputVur,haddleInputBol,resetCount} = counterSlice.actions
 
 export default counterSlice.reducer
